@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6d500">
+  <title>Car Spot Bingo | Swift Sport Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">THE ENTHUSIAST SCAVENGER HUNT</div>
+    <h1>CAR SPOT <span>BINGO</span></h1>
+    <div class="edition">SUZUKI SWIFT SPORT EDITION</div>
+    <div class="stripe"></div>
+    <p>12 challenges. 12 photos. One legendary card.</p>
+  </header>
+
+  <main>
+    <section class="player-panel">
+      <label for="playerName">DRIVER / PLAYER NAME</label>
+      <input id="playerName" maxlength="40" placeholder="Enter your nickname">
+      <div class="progress-heading">
+        <span>YOUR MISSION</span>
+        <strong id="progressText">0 / 12 FOUND</strong>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressMessage">Your hunt starts here. Go find those Swifts!</p>
+    </section>
+
+    <section class="instructions">
+      <span class="instruction-icon">📸</span>
+      <p><strong>Spot it. Snap it. Tick it.</strong><br>
+      Tap any square to take a photo or upload one. Your progress is saved on this device.</p>
+    </section>
+
+    <section id="bingoGrid" class="bingo-grid" aria-label="Swift Sport bingo card"></section>
+
+    <section class="finish-panel">
+      <div class="finish-icon">🏁</div>
+      <h2 id="finishTitle">THE FINISH LINE</h2>
+      <p id="finishMessage">Find all 12 challenges to unlock your finisher's PDF.</p>
+      <button id="downloadPdf" class="primary-button" disabled>
+        ↓ DOWNLOAD MY BINGO PDF
+      </button>
+      <button id="resetGame" class="secondary-button">START A NEW HUNT</button>
+      <p class="privacy-note">Your photos stay on your device. The PDF can be shared anywhere.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mark">CSSB / 001</div>
+    <p>BUILT FOR SWIFT SPORT PEOPLE.</p>
+    <p class="footer-small">Park safely before taking photos. Never use your phone while driving.</p>
+  </footer>
+
+  <input id="photoInput" type="file" accept="image/*" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
